@@ -3,18 +3,18 @@ let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 
 " fzf.vim action settings
 let g:fzf_action = {
-    \ 'ctrl-t': 'tab split',
-    \ 'ctrl-j': 'split',
-    \ 'ctrl-l': 'vsplit',
-    \ }
+      \ 'ctrl-t': 'tab split',
+      \ 'ctrl-j': 'split',
+      \ 'ctrl-l': 'vsplit',
+      \ }
 
 " Rg settings for '?' switch which shows preview
 command! -bang -nargs=* Rg
-    \ call fzf#vim#grep(
-    \ 'rg --column --line-number --hidden --ignore-case --no-heading --color=always '.shellescape(<q-args>), 1,
-    \ <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
-    \         : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
-    \ <bang>0)
+      \ call fzf#vim#grep(
+      \ 'rg --column --line-number --hidden --ignore-case --no-heading --color=always '.shellescape(<q-args>), 1,
+      \ <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
+      \         : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
+      \ <bang>0)
 
 " FZF command
 function! FzfOmniFiles()
@@ -29,21 +29,21 @@ endfunction
 " MRU command
 command! Fmru FZFMru
 command! FZFMru
-    \ call fzf#run({
-    \ 'source':  v:oldfiles,
-    \ 'sink':    'tabe',
-    \ 'options': '-m -x +s',
-    \ 'down':    '40%'
-    \ })
+      \ call fzf#run({
+      \ 'source':  v:oldfiles,
+      \ 'sink':    'tabe',
+      \ 'options': '-m -x +s',
+      \ 'down':    '40%'
+      \ })
 
 " CLI tool 'bat' command (test)
 " command! -bang -nargs=* FzfBat
-"     \ call fzf#run({
-"     \ 'source': 'bat --style="numbers,grid" ' . shellescape(expand('%')),
-"     \ 'sink': 'e',
-"     \ 'options': ['--reverse'],
-"     \ 'window': { 'width': 0.9, 'height': 0.6 },
-"     \ })
+"       \ call fzf#run({
+"       \ 'source': 'bat --style="numbers,grid" ' . shellescape(expand('%')),
+"       \ 'sink': 'e',
+"       \ 'options': ['--reverse'],
+"       \ 'window': { 'width': 0.9, 'height': 0.6 },
+"       \ })
 
 " Mappings
 nnoremap <Leader>G :<C-u>Rg<Space>

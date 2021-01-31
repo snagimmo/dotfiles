@@ -10,13 +10,13 @@ call denite#custom#var('file/rec', 'command', ['rg', '--files', '--glob', '!.git
 
 " Replace 'grep' with 'ripgrep'
 call denite#custom#var('grep', {
-    \ 'command': ['rg'],
-    \ 'default_opts': ['-S', '--vimgrep', '--no-heading'],
-    \ 'recursive_opts': [],
-    \ 'pattern_opt': ['--regexp'],
-    \ 'separator': ['--'],
-    \ 'final_opts': []
-    \ })
+      \ 'command': ['rg'],
+      \ 'default_opts': ['-S', '--vimgrep', '--no-heading'],
+      \ 'recursive_opts': [],
+      \ 'pattern_opt': ['--regexp'],
+      \ 'separator': ['--'],
+      \ 'final_opts': []
+      \ })
 
 " Enlarge max candidates
 call denite#custom#source('file', 'max_candidates', 5000)

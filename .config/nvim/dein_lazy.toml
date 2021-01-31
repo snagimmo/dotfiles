@@ -42,16 +42,16 @@ on_source = ['denite.nvim']
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
 hook_add = '''
-nnoremap <silent> <Leader>ff :<C-u>Fern <C-r>=<SID>smart_path()<CR> -drawer -keep<CR>
-nnoremap <silent> <Leader>ft :<C-u>Fern <C-r>=<SID>smart_path()<CR> -drawer -keep -stay -toggle<CR>
-nnoremap <silent> <Leader>fb :<C-u>Fern bookmark:///<CR>
-nnoremap <Leader>fo :<C-u>e fern:///files:///
-function! s:smart_path() abort
+  nnoremap <silent> <Leader>ff :<C-u>Fern <C-r>=<SID>smart_path()<CR> -drawer -keep<CR>
+  nnoremap <silent> <Leader>ft :<C-u>Fern <C-r>=<SID>smart_path()<CR> -drawer -keep -stay -toggle<CR>
+  nnoremap <silent> <Leader>fb :<C-u>Fern bookmark:///<CR>
+  nnoremap <Leader>fo :<C-u>e fern:///files:///
+  function! s:smart_path() abort
   if !empty(&buftype) || bufname('%') =~# '^[^:]\+://'
-    return fnamemodify('.', ':p')
+      return fnamemodify('.', ':p')
   endif
   return fnamemodify(expand('%'), ':p:h')
-endfunction
+  endfunction
 '''
 hook_post_source = 'source ~/.config/nvim/plugins/fern.rc.vim'
 
