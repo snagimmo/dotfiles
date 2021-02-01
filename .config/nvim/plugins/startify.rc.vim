@@ -1,6 +1,6 @@
 " Option settings
 let g:startify_files_number = 5
-let g:startify_session_number = 5
+let g:startify_session_number = 10
 let g:startify_change_to_dir = 1
 let g:startify_change_to_vcs_root = 1
 
