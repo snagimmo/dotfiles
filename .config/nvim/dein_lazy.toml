@@ -18,18 +18,18 @@ hook_source = 'source ~/.config/nvim/plugins/rooter.rc.vim'
 repo = 'Shougo/denite.nvim'
 on_event = 'BufRead'
 hook_add = '''
-  nnoremap <silent> <Leader>/ :<C-u>Denite -buffer-name=search -auto-resize line<CR>
-  nnoremap <silent> <Leader>? :<C-u>Denite -resume -buffer-name=search<CR>
-  nnoremap <silent> <Leader>da :<C-u>DeniteBufferDir -buffer-name=files buffer file_mru file<CR>
-  nnoremap <silent> <Leader>du :<C-u>DeniteBufferDir file_mru<CR>
-  nnoremap <silent> <Leader>dg :<C-u>DeniteBufferDir grep -buffer-name=grep-buffer-denite<CR>
-  nnoremap <silent> <Leader>dw :<C-u>DeniteCursorWord grep -buffer-name=grep-buffer-denite<CR>
-  nnoremap <silent> <Leader>dr :<C-u>DeniteBufferDir -resume -buffer-name=grep-buffer-denite<CR>
-  nnoremap <silent> <Leader>df :<C-u>DeniteBufferDir -buffer-name=files file/rec -split=floating<CR>
-  nnoremap <silent> <Leader>dd :<C-u>DeniteBufferDir directory_rec -split=floating<CR>
-  nnoremap <silent> <Leader>db :<C-u>Denite buffer -split=floating<CR>
-  nnoremap <silent> <Leader>dt :<C-u>Denite tag -split=floating<CR>
-  nnoremap <silent> <Leader>dh :<C-u>Denite help -split=floating<CR>
+  nnoremap <silent> <Leader>/ :<C-u>Denite line -buffer-name=search -auto-resize -highlight-matched-char=None -highlight-matched-range=Search -match-highlight<CR>
+  nnoremap <silent> <Leader>? :<C-u>Denite -resume -buffer-name=search -highlight-matched-char=None -highlight-matched-range=Search -match-highlight<CR>
+  nnoremap <silent> <Leader>da :<C-u>DeniteBufferDir buffer file_mru file -buffer-name=files -highlight-matched-char=None -highlight-matched-range=Search -match-highlight<CR>
+  nnoremap <silent> <Leader>du :<C-u>DeniteBufferDir file_mru -highlight-matched-char=None -highlight-matched-range=Search -match-highlight<CR>
+  nnoremap <silent> <Leader>dg :<C-u>DeniteBufferDir grep -buffer-name=grep-buffer-denite -highlight-matched-char=None -highlight-matched-range=Search -match-highlight<CR>
+  nnoremap <silent> <Leader>dw :<C-u>DeniteCursorWord grep -buffer-name=grep-buffer-denite -highlight-matched-char=None -highlight-matched-range=Search -match-highlight<CR>
+  nnoremap <silent> <Leader>dr :<C-u>DeniteBufferDir -resume -buffer-name=grep-buffer-denite -highlight-matched-char=None -highlight-matched-range=Search -match-highlight<CR>
+  nnoremap <silent> <Leader>df :<C-u>DeniteBufferDir file/rec -buffer-name=files -split=floating -highlight-matched-char=None -highlight-matched-range=Search -match-highlight<CR>
+  nnoremap <silent> <Leader>dd :<C-u>DeniteBufferDir directory_rec -split=floating -highlight-matched-char=None -highlight-matched-range=Search -match-highlight<CR>
+  nnoremap <silent> <Leader>db :<C-u>Denite buffer -split=floating -highlight-matched-char=None -highlight-matched-range=Search -match-highlight<CR>
+  nnoremap <silent> <Leader>dt :<C-u>Denite tag -split=floating -highlight-matched-char=None -highlight-matched-range=Search -match-highlight<CR>
+  nnoremap <silent> <Leader>dh :<C-u>Denite help -split=floating -highlight-matched-char=None -highlight-matched-range=Search -match-highlight<CR>
 '''
 hook_post_source = 'source ~/.config/nvim/plugins/denite.rc.vim'
 
