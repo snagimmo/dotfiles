@@ -33,15 +33,11 @@ vnoremap * "zy:let @/ = @z<CR>n
 noremap - ^
 noremap _ $
 
-" nnoremap j gj
-" nnoremap k gk
+nnoremap j gj
+nnoremap k gk
 " vnoremap j gj
 " vnoremap k gk
 " set whichwrap=b,s,[,],<,>
-" nnoremap h <Left>
-" nnoremap l <Right>
-" vnoremap h <Left>
-" vnoremap l <Right>
 nnoremap zj 10j
 nnoremap zk 10k
 nnoremap zh 10h
