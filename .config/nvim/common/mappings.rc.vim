@@ -30,7 +30,7 @@ vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 vnoremap * "zy:let @/ = @z<CR>n
 
-noremap - _
+noremap - ^
 noremap _ $
 
 " nnoremap j gj
