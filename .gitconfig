@@ -1,0 +1,40 @@
+[user]
+    name = snagimmo
+    email = 31765952+snagimmo@users.noreply.github.com
+[core]
+    editor = vim
+    pager = LESSCHARSET=utf-8 less
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+    insteadOf = g:
+[url "git@github.com:snagimmo/"]
+    insteadOf = https://github.com/snagimmo/
+    insteadOf = gg:
+[url "git@gitlab.com:"]
+    insteadOf = https://gitlab.com/
+    insteadOf = gl:
+[url "git@gitlab.com:snagimmo/"]
+    insteadOf = https://gitlab.com/snagimmo/
+    insteadOf = ggl:
+[alias]
+    gconf = config --global -e
+    lconf = config --local -e
+    myname = config --global user.name
+    mymail = config --global user.email
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    mylog = log --author="snagimmo"
+    ups = config --get-regexp branch
+    rdiff = diff master..origin/master
+    fdiff = diff HEAD FETCH_HEAD
+    fmerge = merge --no-ff FETCH_HEAD
+[push]
+    default = simple
+[pull]
+    ff = only
+[merge]
+    ff = false
+[filter "lfs"]
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process

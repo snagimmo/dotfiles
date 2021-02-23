@@ -1,0 +1,60 @@
+[user]
+    name = snagimmo
+    email = 31765952+snagimmo@users.noreply.github.com
+[core]
+    editor = vim
+    autoCRLF = true
+    pager = LESSCHARSET=utf-8 less
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+    insteadOf = g:
+[url "git@github.com:snagimmo/"]
+    insteadOf = https://github.com/snagimmo/
+    insteadOf = gg:
+[url "git@gitlab.com:"]
+    insteadOf = https://gitlab.com/
+    insteadOf = gl:
+[url "git@gitlab.com:snagimmo/"]
+    insteadOf = https://gitlab.com/snagimmo/
+    insteadOf = ggl:
+[alias]
+    gconf = config --global -e
+    lconf = config --local -e
+    myname = config --global user.name
+    mymail = config --global user.email
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    mylog = log --author="snagimmo"
+    ups = config --get-regexp branch
+    rdiff = diff master..origin/master
+    fdiff = diff HEAD FETCH_HEAD
+    fmerge = merge --no-ff FETCH_HEAD
+    vsdiff = difftool -y -d -t VSCodeDiff
+    windiff = difftool -y -d -t WinMerge
+    winmerge = mergetool -y -t WinMerge
+[push]
+    default = simple
+[pull]
+    ff = only
+[diff]
+    tool = VSCodeDiff
+[difftool "VSCodeDiff"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[difftool "WinMerge"]
+    path = C:/Program Files/WinMerge/WinMergeU.exe
+    cmd = \"C:/Program Files/WinMerge/WinMergeU.exe\" -f \"*.*\" -e -u -r \"$LOCAL\" \"$REMOTE\"
+[difftool "sourcetree"]
+    cmd = '' \"$LOCAL\" \"$REMOTE\"
+[merge]
+    ff = false
+    tool = WinMerge
+[mergetool "WinMerge"]
+    path = C:/Program Files/WinMerge/WinMergeU.exe
+    cmd = \"C:/Program Files/WinMerge/WinMergeU.exe\" -e -u \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[mergetool "sourcetree"]
+    cmd = "'' "
+    trustExitCode = true
+[filter "lfs"]
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
