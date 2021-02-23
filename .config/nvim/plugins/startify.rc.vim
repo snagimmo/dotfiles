@@ -17,7 +17,6 @@ let g:startify_bookmarks = [
       \ "~/.config/nvim/init.vim",
       \ "~/.config/nvim/dein.toml",
       \ "~/.config/nvim/dein_lazy.toml",
-      \ "~/.gitconfig"
       \ ]
 
 " Mappings
@@ -37,7 +36,7 @@ endfunction
 
 " Welcome page's message
 let g:startify_custom_header = s:filter_header([
-      \ ' <<Neovim>> ',
+      \ '<<Neovim>>',
       \ ])
 
 " ASCII Art
