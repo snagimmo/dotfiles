@@ -152,7 +152,7 @@ augroup ftgroup
 
   " Jumping between ':' and '='
   "autocmd FileType c,cpp,java set matchpairs+==:;
-"
+
   let g:python3_host_prog = expand($PYTHON)
   autocmd FileType python setl cinwords=if,elif,else,for,while,try,except,finally,def,class
   autocmd FileType python setl expandtab tabstop=8 shiftwidth=4 softtabstop=4
