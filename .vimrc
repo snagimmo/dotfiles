@@ -145,7 +145,7 @@ nnoremap ZZ <Nop>
 nnoremap ZQ <Nop>
 
 
-" Languages--------------------------------
+" Filetypes--------------------------------
 " Jumping between ':' and '='
 "autocmd FileType c,cpp,java set matchpairs+==:;
 
