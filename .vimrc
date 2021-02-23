@@ -146,7 +146,6 @@ nnoremap ZQ <Nop>
 
 
 " Filetypes--------------------------------
-
 augroup ftgroup
   autocmd!
 
