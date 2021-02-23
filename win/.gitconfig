@@ -3,7 +3,6 @@
     email = 31765952+snagimmo@users.noreply.github.com
 [core]
     editor = vim
-    autoCRLF = true
     pager = LESSCHARSET=utf-8 less
 [url "git@github.com:"]
     insteadOf = https://github.com/
