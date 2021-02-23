@@ -43,6 +43,6 @@ endif
 
 " Appearances----------------------------------------------------------
 filetype plugin indent on
-syntax on
+syntax enable
 runtime! ./common/theme.rc.vim
 " End Appearances------------------------------------------------------
