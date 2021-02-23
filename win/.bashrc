@@ -1,0 +1,10 @@
+export LANG=ja_JP.UTF-8
+alias ls='ls --color=auto'
+alias ll='ls -l --color=auto'
+alias la='ls -A --color=auto'
+alias lla='ls -lA --color=auto'
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+alias vim='nvim'
+alias gvim='nvim-qt'
