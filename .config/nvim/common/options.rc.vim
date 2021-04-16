@@ -58,4 +58,3 @@ set listchars^=tab:>.
 set matchpairs& matchpairs+=<:>
 
 set tags=./tags;
-

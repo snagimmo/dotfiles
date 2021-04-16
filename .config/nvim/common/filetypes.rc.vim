@@ -16,3 +16,8 @@ autocmd FileType rust setl expandtab tabstop=8 shiftwidth=4 softtabstop=4
 autocmd BufRead,BufNewFile *.vim set filetype=vim
 autocmd FileType vim setl expandtab tabstop=4 shiftwidth=2 softtabstop=2
 
+" JSON
+autocmd FileType json command! Jq %!jq .
+autocmd FileType json command! -range Jql :<line1>,<line2>!jq .
+autocmd FileType json nnoremap <Leader><Leader>j :<C-u>Jq<CR>
+autocmd FileType json vnoremap <Leader><Leader>j :<C-u>Jql<CR>
