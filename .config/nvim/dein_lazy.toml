@@ -183,16 +183,6 @@ on_event = 'BufRead'
 # '''
 
 [[plugins]]
-repo = 'yuttie/comfortable-motion.vim'
-on_event = 'BufRead'
-hook_add = '''
-  let g:comfortable_motion_scroll_down_key = "j"
-  let g:comfortable_motion_scroll_up_key = "k"
-  noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<CR>
-  noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<CR>
-'''
-
-[[plugins]]
 repo = 'easymotion/vim-easymotion'
 on_event = 'BufRead'
 hook_post_source = 'source ~/.config/nvim/plugins/easymotion.rc.vim'
