@@ -21,6 +21,9 @@
     lconf = config --local -e
     myname = config --global user.name
     mymail = config --global user.email
+    ck = checkout
+    rs = restore --staged
+    rv = remote -v
     lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
     mylog = log --author="snagimmo"
     ups = config --get-regexp branch
