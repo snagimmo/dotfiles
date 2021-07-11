@@ -1,6 +1,7 @@
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
+alias catn='cat -n'
 alias vim='nvim'
 alias gvim='nvim-qt'
 alias gcl='git clone'
