@@ -56,7 +56,7 @@ set mouse=a
 
 set list listchars=extends:>,precedes:<,nbsp:%
 "set listchars^=trail:-
-set listchars^=eol:↲
+"set listchars^=eol:$
 set listchars^=tab:>.
 set matchpairs& matchpairs+=<:>
 
